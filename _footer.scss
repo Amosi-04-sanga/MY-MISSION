@@ -1,0 +1,49 @@
+$footer-bg-color: rgb(73, 72, 72);
+$footer-color: white;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $footer-bg-color;
+    color: $footer-color;
+    border: none;
+    outline: none;
+}
+
+.footer {
+     width: 75%;
+     margin: 2rem auto;
+
+
+    &__left, &__middle, &__right {
+       text-align: center;
+       margin: 1rem .7rem;
+       padding: .6rem;
+    }
+    &__header {
+        margin: .5rem .4rem;
+    }
+    &__nav {
+        margin: 1.4rem .7rem;
+    }
+    &__list {
+        display: list-item;
+        padding: .4rem 0;
+        list-style-type: none;
+    }
+    &__nav-link {
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+}
+
+.footer__about, .footer__social, .my--contacts {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    word-spacing: 10px;
+}
+.wheat {
+    color: wheat;
+    font-size: .9em;
+    text-transform: capitalize;
+}

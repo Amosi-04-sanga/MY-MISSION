@@ -1,0 +1,459 @@
+// variables.
+$block-margin: 32px 0 35px;
+$subblock-margin: 22px 0 20px;
+
+@mixin content-shadow {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px 1px grey;
+}
+
+@mixin center {
+    width: 95%;
+    margin: 40px auto;
+}
+@mixin box-shadow($color) {
+    box-shadow: 1px 0 17px 1px $color;
+}
+
+// main.
+main {
+   user-select: auto;      
+}
+
+// intro.
+.intro {
+    @include center;
+    @include content-shadow;
+    padding: .3rem;
+
+    &__row {
+        display: flex;
+    }
+    &__image {
+        padding: 2px;
+        background: linear-gradient(to top right, green, rebeccapurple, tan);
+        border-radius: 1.4rem;
+        width: 120px;
+        height: 90px;
+    }
+    &__my-photo {
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__my-intro {
+        display: grid;
+        place-items: center;
+        text-align: right;
+        margin: 0 10px 0 12px;
+    }
+
+    &__parag {
+        font-size: .9rem;
+        font-style: normal;
+        text-transform: capitalize;
+        text-rendering: auto;
+        font-family: 'Courgette', cursive;
+    }
+
+    &__more {
+        margin: $block-margin;
+    }
+
+    &__more-h2 {
+        padding: .4rem 0 .6rem 0;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    &__more-text {
+        text-indent: 2rem;
+        font-size: .9rem;
+        font-family: cursive;
+        line-height: 1.4rem;
+    } 
+}
+
+// my skills.
+.skills {
+
+    @include center;
+    @include content-shadow;
+    padding: .8rem;   
+}
+
+.coding {
+    margin: $subblock-margin;
+
+    &__header {
+        margin: 12px 0 11px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+}
+
+.markup,
+.javascript, 
+.php, 
+.nodejs, 
+.react, 
+.writing { 
+    display: flex;
+    flex-direction: column;
+    margin: .7rem 0 .8rem;
+}
+
+.markup__text, 
+.javascript__text, 
+.php__text, 
+.nodejs__text, 
+.react__text {
+    margin: .5rem 0 .4rem;       
+}
+
+.markup__html, 
+.react__react, 
+.nodejs__nodejs, 
+.php__php, 
+.javascript__js {
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.bar {
+    display: flex;
+}
+
+.green--bar, .grey--bar{
+    height: 20px;
+    width: 100%;
+}
+.green--bar {
+    text-align: center;
+    border-radius: .6em 0 0 .6em;
+    background: green;
+}
+
+.grey--bar {
+    background-color: grey;
+    border-radius: 0 .8em .8em 0;
+}
+
+// percentages.
+
+.markup__99 {
+    flex: 99%;
+}
+.markup__1 {
+    flex: 1%;
+}
+
+.javascript__99 {
+    flex: 99%;
+}
+.javascript__1 {
+    flex: 1%;
+}
+
+.php__90 {
+    flex: 90%;
+}
+.php__10 {
+    flex: 10%;
+}
+
+.nodejs__97 {
+    flex: 97%;
+}
+.nodejs__3 {
+    flex: 3%;
+}
+
+.react__95 {
+    flex: 95%;
+}
+.react__5 {
+    flex: 5%;
+}
+
+// my language skill.
+.languages {
+    margin: $subblock-margin;
+
+    &__header {
+        margin: 3.6rem 0 .7rem;
+    }
+    
+    &__heading2 {
+        text-transform: capitalize;
+        font-style: normal;
+        text-align: center;
+    }
+
+}
+
+.english, 
+.french, 
+.swahili, 
+.spanish {
+    display: flex;
+    flex-direction: column;
+}
+
+.english__text, 
+.french__text, 
+.swahili__text, 
+.spanish__text {
+    margin: 8px 0 10px;
+    border: none;
+}
+
+// lang skill percentages.
+.english__95 {
+    flex: 95%;
+}
+.english__5 {
+    flex: 5%;
+}
+
+.french__65 {
+    flex: 65%;
+}
+.french__35 {
+    flex: 35%;
+}
+
+.swahili__99 {
+    flex: 99%;
+}
+.swahili__1 {
+    flex: 1%;
+}
+
+.spanish__65 {
+    flex: 65%;
+}
+.spanish__35 {
+    flex: 35%;
+}
+
+// aside.
+.aside {
+    margin: $subblock-margin;
+
+    &__header {
+        margin: 2.7rem 0 .7rem;
+    }
+
+    &__heading2 {
+        text-transform: capitalize;
+        text-align: center;
+    }
+}
+
+.writing {
+
+    &__text {
+        margin: .6rem;
+    }
+    
+    &__writing {
+        text-transform: capitalize;
+    }
+
+    &__95 {
+        flex: 95%;
+    }
+
+    &__5 {
+        flex: 5%;
+    }
+}
+
+
+// design skills.
+.design {
+    margin: $subblock-margin;
+
+    &__header {
+        margin: .7rem 0;
+    }
+
+    &__heading2 {
+        text-transform: capitalize;
+        text-align: center;
+    }
+}
+
+.photoshop {
+   margin: .4rem 0;
+}
+.photoshop__text {
+    text-transform: capitalize;
+}
+
+.photoshop__95 {
+    flex: 95%;
+}
+.photoshop__5 {
+    flex: 5%;
+}
+.figma__92 {
+    flex: 92%;
+}
+.figma__8 {
+    flex: 8%;
+}
+
+// galley.
+.experts {
+    padding: .7rem 1.6rem;
+    @include center;
+    @include content-shadow;      
+
+    &__header {
+        margin: $subblock-margin;
+    }
+    &__text {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__galley {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 40vh);
+    }
+    &__margin--bottom {
+        margin-bottom: 1vh;
+    }
+
+    &__image1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    &__image2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    &__imag3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    &__image4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    &__image5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    &__image6 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+    &__image7 {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+    }
+    &__image8 {
+        grid-column: 1 / 2;
+        grid-row: 8 / 9;
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// my mission.
+.mission {
+    @include center;
+    @include content-shadow;
+    padding: .7rem;
+    
+    &__header {
+        margin: .8rem 0 .5rem;
+    }
+    &__heading4 {
+        text-transform: capitalize;
+        text-align: center;
+    }
+    &__body {
+        @include box-shadow(grey);
+        margin: .8rem 0;
+        padding: .7rem .6rem;
+        border-radius: .7rem;
+    }
+    &__parag {
+        text-indent: .9rem;
+        color: black;
+        font-size: 1rem;
+    }
+    &__parag::first-letter {
+        font-size: 1.9rem;
+    }
+}
+
+// my students.
+.students {
+    @include center;
+    @include content-shadow;
+    padding: .4rem 1.9rem;
+
+    &__header {
+        margin: $subblock-margin;
+    }
+    &__heading4 {
+        text-transform: capitalize;
+        text-align: center;
+    }
+    &__margin-bottom {
+        margin-bottom: 1vh;
+    }
+    
+    &__galley {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 35vh);
+    }
+
+    &__image1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    &__image2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    &__image3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    &__image4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    &__image5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    &__image6 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// image outline.
+.outline {
+    border-radius: .4rem;
+    padding: 2px;
+    background: linear-gradient(to top right, grey, green, red, magenta, rebeccapurple, orange);
+}

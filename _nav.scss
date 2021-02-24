@@ -1,0 +1,79 @@
+// checkbox.
+#check, label{
+    z-index: 11111;
+    position: fixed;
+}
+#check {
+    display: none;
+}
+label {
+    text-transform: uppercase;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Courgette', cursive;
+    font-style: normal;
+    user-select: none;
+}
+#open, #close {
+    position: fixed;
+    top: 3vw;
+    left: 22vw;
+}
+#close {
+    opacity: 0;
+}
+#open {
+    background-color: wheat;
+    padding: 3px;
+    border-radius: .3rem;
+}
+#check:checked ~ nav {
+    left: 0;
+}
+#check:checked ~ label #open {
+    opacity: 0;
+}
+#check:checked ~ label #close {
+    opacity: 1;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    z-index: 9999;
+    transition: all .5s ease-in-out;
+    height: 100%;
+    width: 40%;
+    background-color: tan;
+    overflow: hidden;
+    user-select: none;
+    padding-left: 3rem;
+    font-family: 'Courgette', cursive;
+}
+
+
+.nav {
+
+   &__container {
+       margin: 20vh 0 30vh;
+       border: none;
+       outline: none;
+   }
+
+   &__list {
+       display: list-item;
+       margin: 5vh 0 4vh 0;
+       list-style-type: none;
+   }
+
+   &__link {
+       text-decoration: none;
+       font-family: inherit;
+       font-size: 1.1em;
+       letter-spacing: normal;
+       color: rgb(23, 57, 158);
+       text-transform: capitalize;
+   }
+
+}
